@@ -25,7 +25,9 @@ npx tailwindcss init -p
 ```
 npm i -D daisyui@latest
 ```
-
+```
+npm install next-auth
+```
 #  
 - **`run the development server`**
 ```

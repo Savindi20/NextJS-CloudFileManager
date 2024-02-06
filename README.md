@@ -15,6 +15,14 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ```
 npx create-next-app
 ```
+
+##
+- **`install dependencies`**
+```
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+```
+
 #  
 - **`run the development server`**
 ```

@@ -1,16 +1,23 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## create NextJS Project
-
-```bash
-npx create-next-app
-```
-
 ## Getting Started
 
-First, run the development server:
+###  `Cloud File manager`
+* Next.js
+* React.js
+* Tailwind CSS
+* Firebase
+* NextAuth
+* DaisyUI
 
-```bash
+##
+- **`create NextJS Project`**
+```
+npx create-next-app
+```
+#  
+- **`run the development server`**
+```
 npm run dev
 # or
 yarn dev

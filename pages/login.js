@@ -3,10 +3,10 @@ import React from 'react'
 
 function login() {
   return (
-    <div className='flex justify-center item-center mt-[50%]'>
-        <button className='bg-blue-400 p-2 rounded-xl px-3 text-white'
-        onClick={()=> signIn}>
-            Loging with Google
+    <div className='flex justify-center 
+    items-center mt-[25%] ml-[0%] md:ml-[50%] flex-col gap-6'>
+        <button className='bg-blue-400 p-2 rounded-xl text-white'onClick={()=>signIn()}>
+          Sign with Google
         </button>
     </div>
   )

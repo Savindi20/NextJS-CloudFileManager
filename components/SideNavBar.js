@@ -1,11 +1,17 @@
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
+import menu from "../data/menu";
 import { useRouter } from "next/router";
 import { useSession } from "next-auth/react";
 
 function SideNavBar() {
+    const [activeIndex,setActiveIndex]=useState(0);
     const router=useRouter();
   const {data:session}=useSession();
+    const onMenuClick=(item,index)=>{
+        setActiveIndex(index);
+        router.push('/')
+    }
   return session&&(
     <div
       className="w-[200px]
@@ -65,6 +71,33 @@ function SideNavBar() {
       </button>
 
       <div className="mt-7">
+        {menu.list.map((item,index) => (
+         
+            <h2 
+            key={index}
+            onClick={()=>onMenuClick(item,index)}
+            className={`flex gap-2 items-center
+            p-2 mt-3 text-gray-500 rounded-md cursor-pointer
+            hover:bg-blue-500 hover:text-white
+            ${activeIndex==index?'bg-blue-500 text-white'
+                :null}`}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d={item.logo}
+              />
+            </svg>
+            {item.name}</h2>
+       
+        ))}
       </div>
      
         <dialog id="my_modal_3" className="modal">

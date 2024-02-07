@@ -10,14 +10,16 @@ export default function Home() {
   const router=useRouter();
 
   useEffect(()=>{
-    console.log("User session",session.user)
-    if(!session){
+    console.log("User Session",)
+    if(!session)
+    {
       router.push("/login")
     }
-  },[session])  
-  return (
-    <div className={styles.container}>
-      
-    </div>
-  )
+    else{
+      console.log("User Session",session.user)
+    }
+    setParentFolderId(0);
+
+  },[session])
+
 }

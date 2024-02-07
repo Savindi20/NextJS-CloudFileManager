@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css'
 import { useSession } from 'next-auth/react'
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
+import SearchBar from '../components/SearchBar';
 
 export default function Home() {
   const {data:session}=useSession();
@@ -13,13 +14,18 @@ export default function Home() {
     console.log("User Session",)
     if(!session)
     {
-      router.push("/login")
+      router.push("/")
     }
     else{
       console.log("User Session",session.user)
     }
-    setParentFolderId(0);
 
   },[session])
+
+  return (
+    <div className='p-5'>
+      <SearchBar/>
+    </div>
+  )
 
 }

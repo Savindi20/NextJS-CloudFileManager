@@ -16,7 +16,6 @@ function login() {
     else{
       console.log("User Session",session.user)
     }
-    setParentFolderId(0);
 
   },[session])
 

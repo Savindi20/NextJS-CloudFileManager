@@ -1,4 +1,5 @@
 import SideNavBar from "../components/SideNavBar";
+import Toast from "../components/Toast";
 import "../styles/globals.css";
 import { SessionProvider } from "next-auth/react";
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
@@ -19,6 +20,8 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
         </div>
       
       </div>
+      {showToastMsg?<Toast msg={showToastMsg} />:null}
+      
     </SessionProvider>
   );
 }

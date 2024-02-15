@@ -1,6 +1,9 @@
 import React, { useContext, useEffect } from 'react'
+import { ShowToastContext } from '../context/ShowToastContext';
 
 function Toast({msg}) {
+    const {showToastMsg,setShowToastMsg}
+    =useContext(ShowToastContext)
     useEffect(()=>{
         setInterval(()=>{
             setShowToastMsg(null);

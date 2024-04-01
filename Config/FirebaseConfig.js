@@ -7,7 +7,7 @@ import { getAnalytics } from "firebase/analytics";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyCHdgTgWVhQg_ya10Fer4pTA68G_0wegQc",
+  apiKey: process.env.FIREBASE_API_KEY,
   authDomain: "nextjscloudmanager.firebaseapp.com",
   projectId: "nextjscloudmanager",
   storageBucket: "nextjscloudmanager.appspot.com",
@@ -19,3 +19,7 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+
+export default {
+  app
+}
